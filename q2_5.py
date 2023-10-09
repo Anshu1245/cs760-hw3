@@ -91,6 +91,10 @@ for x in threshold:
     tpr_log.append(tp_log / (tp_log + fn_log))
     fpr_log.append(fp_log / (tn_log + fp_log))
 
+fpr_knn.append(0)
+tpr_knn.append(0)
+fpr_log.append(0)
+tpr_log.append(0)
 plt.plot(fpr_knn, tpr_knn, label='KNN')
 plt.plot(fpr_log, tpr_log, label='Logistic Regression')
 plt.legend()
